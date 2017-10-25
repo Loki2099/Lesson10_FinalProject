@@ -17,17 +17,18 @@
 
         if (current === "." || current === "!" || current === "?"){
             lineCount++;
+            wordCount++;
         }
     }
 
     avgWords = wordCount / lineCount;
 
-    var r1 = document.createElement("p");
-    r1.innerHTML("There are an average of " + avgWords.toString() + " words per sentence.");
-    var r2 = document.createElement("p");
-    r2.innerHTML("There are " + spaceCount.toString() + " spaces in this text.");
-    var r3 = document.createElement("p");
-    r3.innerHTML("There are " + wordCount.toString() + " words in this text.");
-    var r4 = document.createElement("p");
-    r4.innerHTML("There are " + lineCount.toString() + " sentences in this text.");
+    var r1 = document.getElementById("r1");
+    r1.innerHTML = "There are an average of " + avgWords.toString() + " words per sentence.";
+    var r2 = document.getElementById("r2");
+    r2.innerHTML = "There are " + spaceCount.toString() + " spaces in this text.";
+    var r3 = document.getElementById("r3");
+    r3.innerHTML = "There are " + wordCount.toString() + " words in this text.";
+    var r4 = document.getElementById("r4");
+    r4.innerHTML = "There are " + lineCount.toString() + " sentences in this text.";
 }
