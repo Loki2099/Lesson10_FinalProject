@@ -8,9 +8,9 @@
     var inputVal = document.getElementById("inputTXT").value;
 
     for (var i = 0; i < inputVal.length; i++) {
-        var current = inputVal[i];
+        var current = inputVal[i]; 
 
-        if (current === " ") {
+        if (current === " "){
             spaceCount++;
             if (i > 0) wordCount++;
         }
@@ -21,7 +21,7 @@
         }
     }
 
-    avgWords = wordCount / lineCount;
+    avgWords = parseFloat((wordCount / lineCount).toFixed(2));
 
     document.getElementById("r1").innerHTML = "There are an average of " + avgWords.toString() + " words per sentence.";
     document.getElementById("r2").innerHTML = "There are " + spaceCount.toString() + " spaces in this text.";
